@@ -1,0 +1,77 @@
+body {
+  background-color: blue;
+  color: white;
+}
+
+.pagination-container {
+  font-family: system-ui;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pageNumbers {
+  --clr-fr: white;
+  --clr-fr2: green;
+  --clr-bg: black;
+  --clr-bg2: #571f2a;
+  --clr-bg3: rgb(87, 31, 42, 0.3);
+
+  display: flex;
+  list-style: none;
+  user-select: none;
+  flex-wrap: wrap;
+  gap: 2px;
+  color: var(--clr-fr);
+  padding: 0;
+  /* background-color: var(--clr-bg); */
+  /* border: 1px solid red; */
+}
+
+.pageNumbers li:last-child {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.pageNumbers li {
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid var(--clr-bg); */
+  cursor: pointer;
+  background-color: var(--clr-bg);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0px 2px 5px var(--clr-bg);
+  border-radius: 3px;
+}
+
+.pageNumbers li.active {
+  background: var(--clr-bg2);
+  color: var(--clr-fr);
+}
+
+.pageNumbers li:hover:not(.active, .disabled) {
+  background-color: var(--clr-bg3);
+  text-shadow: 5px;
+  /* color: var(--clr-fr2); */
+  /* font-weight: bold; */
+  border: 1px solid var(--clr-bg2);
+  transition: 0.3s ease all;
+}
+.pageNumbers li:focus {
+  outline: none;
+}
+
+.pageNumbers li.disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.loadmore {
+  padding: 1rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  border: 1px solid white;
+  cursor: pointer;
+}

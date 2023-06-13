@@ -1,0 +1,72 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageNumbers {
+  --clr-fr: white;
+  --clr-bg: black;
+  --clr-bg2: #571f2a;
+  --clr-bg3: rgb(87, 31, 42, 0.5);
+
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  flex-wrap: wrap;
+  gap: 2px;
+  color: var(--clr-fr);
+  /* background-color: var(--clr-bg); */
+  /* border: 20px solid red; */
+}
+
+.pageNumbers li:last-child {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.pageNumbers li {
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid var(--clr-bg); */
+  cursor: pointer;
+  background-color: var(--clr-bg);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0px 2px 5px var(--clr-bg);
+  border-radius: 3px;
+}
+
+.pageNumbers li.active {
+  background: var(--clr-bg2);
+  color: var(--clr-fr);
+}
+
+.pageNumbers li:hover:not(.active, .disabled) {
+  background-color: var(--clr-bg3);
+  text-shadow: 5px;
+  transition: 0.3s ease all;
+}
+.pageNumbers li:focus {
+  outline: none;
+}
+
+.pageNumbers li.disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.loadmore {
+  padding: 1rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  border: 1px solid white;
+  cursor: pointer;
+}
